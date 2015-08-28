@@ -1,0 +1,12 @@
+redis:
+  image: taomaree/redis
+  #container_name: redis_1
+  environment:
+    - TZ=Asia/Shanghai
+    - APP_PORT=6379
+  ports:
+    - "6379:6379/tcp"
+  volumes:
+    - /srv/data:/srv/data
+  restart: always
+  privileged: false
